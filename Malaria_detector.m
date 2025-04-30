@@ -66,8 +66,12 @@ colorbar
 title('Potencial eléctrico')
 xlabel('x')
 ylabel('y')
+hold on
+for i = 1:charges_quantity
+    plot(positive_x_positions(i), positive_y_positions(i), "ks", "LineWidth", 3)
+    plot(negative_x_positions(i), negative_y_positions(i), "ks", "LineWidth", 3)
+end
 
-hold off
 % equipotenciales y campo
 % Reutilizamos V y [X, Y] calculados en la parte de potencial
 figure
